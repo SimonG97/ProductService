@@ -2,6 +2,8 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using ProductService;
 using ProductService.DbContexts;
+using ProductService.IRepository;
+using ProductService.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,8 @@ IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+//configuring repositories
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 
