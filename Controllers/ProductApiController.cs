@@ -1,3 +1,5 @@
+using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductService.Dto;
 using ProductService.IRepository;
@@ -18,6 +20,7 @@ public class ProductApiController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     public async Task<object> Get()
     {
         try
@@ -34,6 +37,7 @@ public class ProductApiController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     [Route("{id}")]
     public async Task<object> Get(int id)
     {
@@ -51,6 +55,7 @@ public class ProductApiController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<object> Post([FromBody] ProductDto productDto)
     {
         try
@@ -67,6 +72,7 @@ public class ProductApiController : ControllerBase
     }
 
     [HttpPut]
+    [Authorize]
     public async Task<object> Put([FromBody] ProductDto productDto)
     {
         try
@@ -83,6 +89,7 @@ public class ProductApiController : ControllerBase
     }
 
     [HttpDelete]
+    [Authorize(Roles = "Admin")]
     [Route("{id}")]
     public async Task<object> Delete(int id)
     {
