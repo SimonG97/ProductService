@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using ProductService.DbContexts;
+using ProductAPI.DbContexts;
 
 #nullable disable
 
-namespace ProductService.Migrations
+namespace ProductAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20221221035717_Initial")]
@@ -23,7 +23,7 @@ namespace ProductService.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("ProductService.Models.Product", b =>
+            modelBuilder.Entity("ProductAPI.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()

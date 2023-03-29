@@ -2,10 +2,10 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using ProductService;
-using ProductService.DbContexts;
-using ProductService.IRepository;
-using ProductService.Repository;
+using ProductAPI;
+using ProductAPI.DbContexts;
+using ProductAPI.IRepository;
+using ProductAPI.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,7 +52,7 @@ builder.Services.AddAuthorization(options =>
 //configuring swagger
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProductService", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProductAPI", Version = "v1" });
     c.EnableAnnotations();
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {

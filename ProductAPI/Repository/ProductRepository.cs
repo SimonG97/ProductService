@@ -1,11 +1,11 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using ProductService.DbContexts;
-using ProductService.Dto;
-using ProductService.IRepository;
-using ProductService.Models;
+using ProductAPI.DbContexts;
+using ProductAPI.Dto;
+using ProductAPI.IRepository;
+using ProductAPI.Models;
 
-namespace ProductService.Repository;
+namespace ProductAPI.Repository;
 
 public class ProductRepository : IProductRepository
 {

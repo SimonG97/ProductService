@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "ProductService": {
+    "ProductAPI": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

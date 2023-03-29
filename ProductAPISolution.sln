@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductAPI\ProductService.csproj", "{7F0C16AA-4F97-43ED-AD95-F40BA2D52792}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPI", "ProductAPI\ProductAPI.csproj", "{7F0C16AA-4F97-43ED-AD95-F40BA2D52792}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductAPITests", "ProductAPITests\ProductAPITests.csproj", "{B5037E41-533B-48E4-899A-059F29B2F1AE}"
 EndProject
