@@ -55,13 +55,13 @@ public class ProductRepository : IProductRepository
 
     public async Task<ProductDto> GetProductById(int productId)
     {
-        Product product = await _db.Products.FirstOrDefaultAsync(x => x.ProductId == productId);
+        Product product = await _db.Products.AsNoTracking().FirstOrDefaultAsync(x => x.ProductId == productId);
         return _mapper.Map<ProductDto>(product);
     }
 
     public async Task<IEnumerable<ProductDto>> GetProducts()
     {
-        List<Product> productList = await _db.Products.ToListAsync();
+        List<Product> productList = await _db.Products.AsNoTracking().ToListAsync();
         return _mapper.Map<List<ProductDto>>(productList);
 
     }
