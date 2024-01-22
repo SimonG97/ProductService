@@ -1,6 +1,6 @@
-using ProductService.Dto;
+using ProductAPI.Dto;
 
-namespace ProductService.IRepository;
+namespace ProductAPI.IRepository;
 
 public interface IProductRepository
 {

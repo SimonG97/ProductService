@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace ProductService.Migrations
+namespace ProductAPI.Migrations
 {
     public partial class SeedProducts : Migration
     {

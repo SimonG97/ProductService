@@ -1,10 +1,10 @@
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ProductService.Dto;
-using ProductService.IRepository;
+using ProductAPI.Dto;
+using ProductAPI.IRepository;
 
-namespace ProductService.Controllers;
+namespace ProductAPI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

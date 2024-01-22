@@ -1,8 +1,8 @@
 using AutoMapper;
-using ProductService.Dto;
-using ProductService.Models;
+using ProductAPI.Dto;
+using ProductAPI.Models;
 
-namespace ProductService;
+namespace ProductAPI;
 
 public class MappingConfig
 {
